@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+    --ff: 'Bai Jamjuree', sans-serif;
+
+    --clr-cyan: hsl(171, 66%, 44%);
+    --clr-blue: hsl(233, 100%, 69%);
+    --clr-title: hsl(210, 10%, 33%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-copy: hsl(201, 11%, 66%);
+    --bg-main: hsl(210, 46%, 95%);
+  
+    --fs-h1: 2.2rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.6rem;
+    --fs-h4: 1.375rem;
+    --fs-p: 1.125rem;
+    --fs-p-m: 1rem; 
+    --fs-footer: 1.25rem;
+
+    --fw-400: 400;
+    --fw-600: 600;
+   
+    --gap-s: 1rem;
+    --gap-m: calc(var(--gap-s) * 2);
+    --gap-l: calc(var(--gap-s) * 3);
+
+    --opacity: 85%; 
+
+    --w: 90%;
+    --mw-m: 550px;
+    --mw-t: 700px;
+    --mw-d: 1200px; 
+}
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    body,
+    h1, h2, h3, p {
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        }
+    
+    a { 
+        text-decoration: none;
+    }
+    
+    img {
+        max-width: 100%;
+        display: block;
+    }
+   
+    body {
+        font-family: var(--ff);
+        font-size: var(--fs-p-m);
+        background: url("./images/bg-header-mobile.png") no-repeat;
+        background-size: 100% 15%;
+        background-color: var(--bg-white);
+        line-height: 1.5;
+        font-weight: var(--fw-400);
+        color: var(--clr-copy);
+    }
+
+    .container {
+        max-width: var(--mw-t);
+        text-align: center;
+        padding: 7rem 1.5rem;
+        width: var(--w);
+        margin: 0 auto;
+    }
+
+.logo {
+    width: 7rem;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: var(--gap-l);
+}
+
+.wrapper {
+    padding:2rem 0;
+}
+
+.header__title,
+.clipboard__title,
+.clipboard__heading {
+    color: var(--clr-title);
+    line-height: 1.1;
+}
+
+.header__title {
+    font-size: var(--fs-h2);
+}
+
+.clipboard__title {
+    font-size: var(--fs-h3);
+}
+
+.clipboard__heading {
+    font-size: var(--fs-h4);
+}
+
+.copy {
+    font-size: var(--fs-p);
+}
+
+.copy, 
+.clipboard__copy,
+.clipboard__copy-s {
+    padding: 1rem 0 2rem;
+    width: 30ch;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 1rem 4rem;
+    border-radius: 50px;
+    color: var(--bg-main);
+    border: none;
+    letter-spacing: .5px;
+    font-weight: 600;
+    transition: opacity 0.3s ease-out;
+    display: block;
+    width: 100%;
+}
+
+.btn--blue {
+    background: var(--clr-blue);
+    box-shadow: inset 0 -2px 0px 1px hsl(233, 57%, 46%);
+}
+
+.btn--cyan {
+    background: var(--clr-cyan);
+    box-shadow: inset 0 -2px 0 1px hsl(171, 69%, 36%);
+    margin-bottom: var(--gap-s);
+}
+
+.btn--blue:hover,
+.btn--cyan:hover {
+    opacity: var(--opacity);
+}
+
+.clipboard__list {
+    padding-top: var(--gap-m);
+}
+
+.clipboard--m__list,
+.clipboard-l__list  {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.clipboard-m_item {
+    margin-bottom: var(--gap-s);
+}
+
+.clipboard-m__img {
+    margin: 0 auto;
+    padding-bottom: var(--gap-m);
+}
+
+.clipboard-l__img {
+    max-width: 100px;
+    margin: 0 auto;
+    padding-top: var(--gap-m);
+}
+
+.footer__wrapper {
+background-color: #f1f1f1;
+padding: 2rem;
+text-align: center;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.footer__logo {
+    width: 3rem;
+    margin: 0 auto;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: var(--gap-s);
+}
+
+.footer__link a {
+    color: var(--clr-title);
+}
+
+.footer_item {
+    padding-bottom: 1rem;
+}
+
+.footer__socials  {
+    display: flex;
+}
+
+.footer__link {
+    gap: var(--gap-l);
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-bottom: 2em;
+} 
+
+.footer__socials a:not(:last-child) {
+    padding-right: var(--gap-s);
+}
+
+.desktop__img {
+    margin: 0;
+
+}
+
+
+@media (min-width: 700px) {
+
+body {
+    background: url("./images/bg-header-desktop.png") no-repeat;
+    background-size: 100% 10%;
+}
+.container, .wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--mw-d);
+    text-align: center;
+    padding: 4rem 0;
+    width: var(--w);
+    margin: 0 auto;
+}
+
+.clipboard__copy {
+    width: 25ch;
+}
+.copy {
+    width: 45ch;
+}
+
+.clipboard__copy-s {
+    width: 30ch;
+}
+
+.btn {
+    display: inline-block;
+    width: auto;
+}
+
+.logo {
+    width: 5rem;
+}
+
+
+.btn--cyan {
+    margin-bottom: 0;
+    margin-right: var(--gap-s);
+}
+
+.clipboard__list {
+    text-align: left;
+}
+
+.tablet__img {
+    max-width: var(--w);
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.clipboard-l__list,
+.clipboard--m__list {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+
+.clipboard-m__item {
+    padding-bottom: 3rem;
+}
+
+.wrapper {
+    padding: 2.5rem 0;
+}
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items: start;
+    align-items: center;
+    
+}
+
+.footer__logo {
+    grid-column: 1;
+    justify-content: flex-start;
+}
+
+.footer__link {
+    display: grid;
+    grid-column: 2/4;
+    grid-column-gap: 50px;
+    align-items: start;
+    justify-items: start;
+    grid-template-areas: 'one three five'
+    'two four .';
+} 
+
+.one {
+    grid-area: one;
+    align-self: end;
+}
+
+.two {
+    grid-area: two;
+    align-self: start;
+}
+
+.three {
+    grid-area: three;
+    align-self: end;
+}
+
+.four {
+    grid-area: four;
+    align-self: start;
+}
+
+.five {
+    grid-area: five;
+    align-self: end;
+}
+
+.footer_item {
+    padding: 0;
+}
+
+.footer__link {
+    gap: var(--gap-m);
+    margin-bottom: 0; 
+    flex-wrap: wrap;
+} 
+
+.footer__socials {
+    justify-content: center;
+    align-items: center;
+    grid-column: 5;
+}
+
+ .clipboard__sec1 {
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 0;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop__img {
+    flex-basis: calc(50% + 30%);
+    margin-left: -30%;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+}
+
+
